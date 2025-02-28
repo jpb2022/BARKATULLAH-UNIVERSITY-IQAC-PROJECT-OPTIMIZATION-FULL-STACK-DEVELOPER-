@@ -1,6 +1,6 @@
 # BARKATULLAH-UNIVERSITY-IQAC-PROJECT-OPTIMIZATION-FULL-STACK-DEVELOPER-
 
-# IQAC Document Viewer
+# IQAC SECTION
 
 ## 📌 Project Overview
 The **IQAC Document Viewer** is a web-based application designed to provide easy access to important institutional documents. The system allows users to view PDF files directly within the browser using an embedded viewer while maintaining a well-organized document repository.
