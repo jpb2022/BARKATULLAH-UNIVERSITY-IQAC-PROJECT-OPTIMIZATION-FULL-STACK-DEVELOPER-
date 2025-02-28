@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIRF</title>
+    <link rel="shortcut icon" href="image/Barkatullah_University_logo.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #E29850;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        main {
+            margin: 20px;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        #pdf-container {
+            margin-top: 20px;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        iframe {
+            width: 80%;
+            height: 500px;
+            border: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>NIRF</h1>
+    </header>
+    <main>
+        <label for="NIRF-select">Select NIRF section:</label>
+        <select id="NIRF-select">
+            <option value="">--Select NIRF--</option>
+            <option value="http://www.bubhopal.ac.in/Site/Upload/Menu/1600_1647_NIRF-2022_NIRF2022.pdf">NIRF 2022</option>
+            <option value="http://www.bubhopal.ac.in/Site/Upload/Menu/1600_1647_NIRF-2023_NIRF2023.pdf">NIRF 2023</option>
+            <option value="http://www.bubhopal.ac.in/Site/Upload/Menu/1600_1647_NIRF-2024_Eng%20merged.pdf">NIRF 2024</option>
+        </select>
+       
+        <div id="pdf-container">
+            <p id="pdf-message">Select a NIRF section to view the NIRF report.</p>
+            <iframe id="pdf-viewer" src="" hidden></iframe>
+        </div>
+    </main>
+    <script>
+        document.getElementById('NIRF-select').addEventListener('change', function() {
+            let pdfContainer = document.getElementById('pdf-container');
+            let pdfViewer = document.getElementById('pdf-viewer');
+            let pdfMessage = document.getElementById('pdf-message');
+           
+            if (this.value) {
+                pdfViewer.src = this.value; 
+                pdfViewer.hidden = false;
+                pdfContainer.style.display = 'block';
+                pdfMessage.style.display = 'none';
+            } else {
+                pdfViewer.hidden = true;
+                pdfContainer.style.display = 'block';
+                pdfMessage.style.display = 'block';
+                pdfMessage.innerText = "Select a NIRF section to view the NIRF report.";
+            }
+        });
+    </script>
+</body>
+</html>

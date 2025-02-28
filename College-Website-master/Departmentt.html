@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departments - Barkatullah Vishwavidyalaya</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #E29850;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        .tagline {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        /* Department Section */
+        .department-section {
+            padding: 40px 0;
+            background-color: white;
+        }
+
+        .department-section .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #E29850;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .additional-info {
+            font-style: italic;
+            margin-top: 30px;
+            color: #555;
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        .dropdown-btn {
+            background-color: #E29850;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dropdown-btn:hover {
+            background-color: #E29850;
+        }
+
+        .dropdown-content {
+            display: auto;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 200px;
+            max-height: 300px; /* Added max height */
+            overflow-y: auto; /* Enables scrolling */
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 20;
+            left: 0;
+            padding: 10px;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            font-size: 1.1em;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Dropdown Hover Interaction */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropdown-btn {
+            background-color: #E29850;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: #E29850;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer p {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Barkatullah Vishwavidyalaya</h1>
+            <p class="tagline">Departments - Explore Our Academic Programs</p>
+        </div>
+    </header>
+
+    <section class="department-section">
+        <div class="container">
+            <h2>Our Departments</h2>
+            <p>Select a department to learn more about its offerings.</p>
+
+            <!-- Dropdown Section -->
+            <div class="dropdown">
+                <button class="dropdown-btn">Select Department</button>
+                <div class="dropdown-content">
+                    <a href="#">Arts</a>
+                    <a href="#">Social Science</a>
+                    <a href="#">Science</a>
+                    <a href="#">Life Science</a>
+                    <a href="#">Engineering</a>
+                    <a href="#">Law</a>
+                    <a href="#">Commerce</a>
+                    <a href="#">Education</a>
+                    <a href="#">Physical Education</a>
+                    <a href="#">Technology</a>
+                    <a href="#">Home Science</a>
+                    <a href="#">Management</a>
+                </div>
+            </div>
+
+            <p class="additional-info">Explore a diverse range of academic disciplines at Barkatullah Vishwavidyalaya. From engineering to social sciences, we offer comprehensive courses across various faculties.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Barkatullah Vishwavidyalaya. All Rights Reserved.</p>
+            <p>Contact: +91-755-2517100 | Email: <a href="mailto:info@bubhopal.ac.in">info@bubhopal.ac.in</a></p>
+        </div>
+    </footer>
+</body>
+</html>

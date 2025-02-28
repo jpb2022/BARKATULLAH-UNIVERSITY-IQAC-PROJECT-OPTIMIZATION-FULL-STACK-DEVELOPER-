@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQAC & AQAR</title>
+    <link rel="shortcut icon" href="image/Barkatullah_University_logo.png" type="image/svg+xml">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        main {
+            margin: 20px;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+        }
+        #pdf-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>IQAC & AQAR</h1>
+    </header>
+    <main>
+        <label for="category-select">Select Category:</label>
+        <select id="category-select">
+            <option value="">--Select Category--</option>
+            <option value="iqac">IQAC</option>
+            <option value="aqar">AQAR</option>
+        </select>
+        
+        <label for="year-select">Select Year:</label>
+        <select id="year-select" disabled>
+            <option value="">--Select Year--</option>
+        </select>
+        
+        <div id="pdf-container">
+            <p>Select a category and year to view the document.</p>
+        </div>
+    </main>
+    <script>
+        document.getElementById("category-select").addEventListener("change", function() {
+            let yearSelect = document.getElementById("year-select");
+            yearSelect.innerHTML = '<option value="">--Select Year--</option>';
+            yearSelect.disabled = this.value === "";
+            
+            if (this.value !== "") {
+                let years = ["2025", "2024", "2023"];
+                years.forEach(year => {
+                    let option = document.createElement("option");
+                    option.value = year;
+                    option.textContent = year;
+                    yearSelect.appendChild(option);
+                });
+            }
+        });
+
+        document.getElementById("year-select").addEventListener("change", function() {
+            let category = document.getElementById("category-select").value;
+            let year = this.value;
+            let container = document.getElementById("pdf-container");
+            
+            if (category && year) {
+                container.innerHTML = `<p>Displaying ${category.toUpperCase()} document for ${year}.</p>`;
+                // You can add PDF embedding logic here if needed.
+            } else {
+                container.innerHTML = "<p>Select a category and year to view the document.</p>";
+            }
+        });
+    </script>
+</body>
+</html>

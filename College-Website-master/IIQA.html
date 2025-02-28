@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIQA</title>
+    <link rel="shortcut icon" href="image/Barkatullah_University_logo.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #E29850;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        main {
+            margin: 20px;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        #pdf-container {
+            margin-top: 20px;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        iframe {
+            width: 80%;
+            height: 500px;
+            border: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>IIQA</h1>
+    </header>
+    <main>
+        <label for="IIQA-select">Select IIQA section:</label>
+        <select id="IIQA-select">
+            <option value="">--Select IIQA--</option>
+            <option value="iiqa1.pdf">IIQA 1</option>
+            <option value="iiqa2.pdf">IIQA 2</option>
+            <option value="iiqa3.pdf">IIQA 3</option>
+        </select>
+        
+        <div id="pdf-container">
+            <p id="pdf-message">Select an IIQA section to view the IIQA part.</p>
+            <iframe id="pdf-viewer" src="" hidden></iframe>
+        </div>
+    </main>
+    <script>
+        document.getElementById('IIQA-select').addEventListener('change', function() {
+            let pdfContainer = document.getElementById('pdf-container');
+            let pdfViewer = document.getElementById('pdf-viewer');
+            let pdfMessage = document.getElementById('pdf-message');
+            
+            if (this.value) {
+                pdfViewer.src = 'pdfs/' + this.value; // Assuming PDFs are stored in 'pdfs/' directory
+                pdfViewer.hidden = false;
+                pdfContainer.style.display = 'block';
+                pdfMessage.style.display = 'none';
+            } else {
+                pdfViewer.hidden = true;
+                pdfContainer.style.display = 'block';
+                pdfMessage.style.display = 'block';
+                pdfMessage.innerText = "Select an IIQA section  to view the IIQA part.";
+            }
+        });
+    </script>
+</body>
+</html>
+
+

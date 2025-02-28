@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AISHE</title>
+    <link rel="shortcut icon" href="image/Barkatullah_University_logo.png" type="image/png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #E29850;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        main {
+            margin: 20px;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        #pdf-container {
+            margin-top: 20px;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        iframe {
+            width: 80%;
+            height: 500px;
+            border: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AISHE</h1>
+    </header>
+    <main>
+        <label for="AISHE-select">Select AISHE section:</label>
+        <select id="AISHE-select">
+            <option value="">--Select AISHE--</option>
+            <option value="http://www.bubhopal.ac.in/Site/Upload/Menu/1600_1662_AISHE-2014-15_AISHE%202014-15%20Certificate%20of%20BU.pdf">AISHE 2014-2015</option>
+            <option value="http://www.bubhopal.ac.in/Site/Upload/Menu/1600_1662_AISHE-2015-16_AISHE%202015-16%20Certificate%20of%20BU.pdf">AISHE 2015-2016</option>
+            <option value="http://www.bubhopal.ac.in/Site/Upload/Menu/1600_1662_AISHE-2016-17_AISHE%202016-17%20Certificate%20of%20BU.pdf">AISHE 2016-2017</option>
+            <option value="http://www.bubhopal.ac.in/Site/Upload/Menu/1600_1662_AISHE-2017-18_AISHE%202017-18%20Certificate%20of%20BU.pdf">AISHE 2017-2018</option>
+            <option value="http://www.bubhopal.ac.in/Site/Upload/Menu/1600_1662_AISHE-2018-19_AISHE%202018-19%20Certificate%20of%20BU.pdf">AISHE 2018-2019</option>
+            <option value="http://www.bubhopal.ac.in/Site/Upload/Menu/1600_1662_AISHE-2019-20_AISHE%202019-20%20Certificate%20of%20BU.pdf">AISHE 2019-2020</option>
+            <option value="http://www.bubhopal.ac.in/Site/Upload/Menu/1600_1662_AISHE-2020-21_AISHE%202020-21%20Certificate%20of%20BU.pdf">AISHE 2020-2021</option>
+        </select>
+        
+        <div id="pdf-container">
+            <p id="pdf-message">Select an AISHE section to view the AISHE report.</p>
+            <iframe id="pdf-viewer" src="" hidden></iframe>
+        </div>
+    </main>
+    <script>
+        document.getElementById('AISHE-select').addEventListener('change', function() {
+            let pdfContainer = document.getElementById('pdf-container');
+            let pdfViewer = document.getElementById('pdf-viewer');
+            let pdfMessage = document.getElementById('pdf-message');
+            
+            if (this.value) {
+                pdfViewer.src = this.value;
+                pdfViewer.hidden = false;
+                pdfContainer.style.display = 'block';
+                pdfMessage.style.display = 'none';
+            } else {
+                pdfViewer.hidden = true;
+                pdfContainer.style.display = 'block';
+                pdfMessage.style.display = 'block';
+                pdfMessage.innerText = "Select an AISHE section to view the AISHE report.";
+            }
+        });
+    </script>
+</body>
+</html>
+
+

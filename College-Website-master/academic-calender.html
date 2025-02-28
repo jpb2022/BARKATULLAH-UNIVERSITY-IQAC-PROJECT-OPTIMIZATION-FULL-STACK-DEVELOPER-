@@ -1,0 +1,57 @@
+<!-- HTML: index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Calendar</title>
+    <link rel="shortcut icon" href="image/Barkatullah_University_logo.png" type="image/svg+xml">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header {
+    background-color: #E29850;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+}
+main {
+    margin: 20px;
+}
+select {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+}
+#pdf-container {
+    margin-top: 20px;
+}
+
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>Academic Calendar</h1>
+    </header>
+    <main>
+        <label for="year-select">Select Academic Year:</label>
+        <select id="year-select">
+            <option value="">--Select Year--</option>
+            <option value="2025">2022-23</option>
+            <option value="2024">2023-24</option>
+            <option value="2023">2023-24</option>
+        </select>
+        
+        <div id="pdf-container">
+            <p>Select an academic year to view the calendar.</p>
+        </div>
+    </main>
+    <script defer src="javascript/script.js"></script>
+</body>
+</html>
+

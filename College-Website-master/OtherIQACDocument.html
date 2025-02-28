@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQAC Document Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            background-color: #ff9933;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+        }
+        .document-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            background-color: #ff9933;
+            border-radius: 10px;
+        }
+        .document-list a {
+            display: block;
+            text-decoration: none;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            color: black;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .document-list a:hover {
+            background: #ff6600;
+            color: white;
+        }
+        .document-viewer {
+            margin-top: 20px;
+            text-align: center;
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ff9933;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>IQAC Document Viewer</h1>
+        </header>
+        <main>
+            <div class="document-list">
+                <!-- <a href="documents/IIQA.pdf" target="viewer">IIQA</a>
+                <a href="documents/AISHE.pdf" target="viewer">AISHE</a>
+                <a href="documents/NIRF.pdf" target="viewer">NIRF</a> -->
+                <a href="documents/UGC_Act.pdf" target="viewer">UGC Act</a>
+                <a href="documents/IQAC_Activities.pdf" target="viewer">IQAC Activities</a>
+
+                <a href="http://www.bubhopal.ac.in/Site/Upload/Menu/1600_1637_CODE-OF-PROFESSIONAL-ETHICS_CODE%20OF%20PROFESSIONAL%20ETHICS.pdf" target="viewer">Code of Professional Ethics</a>
+                <a href="https://drive.google.com/drive/folders/1SgXcxnad4cSFYUGcjHHoUET50X1PO0YP" target="_blank">BOS Minutes</a>
+                <a href="http://www.bubhopal.ac.in/Site/Upload/b55ce7b6-d338-49a2-b65c-b992ff966dda.pdf" target="viewer">ICT Enabled Infrastructure</a>
+                <a href="http://www.bubhopal.ac.in/Site/Upload/Menu/1600_1637_Code-of-Conduct-Professional-Ethics-Adobe-Scan-_Code%20of%20Conduct%20-Professional%20Ethics%20Adobe%20Scan%2004%20Oct%202022%20(5).pdf" target="viewer">Code of Conduct - Professional Ethics</a>
+                <a href="http://www.bubhopal.ac.in/Site/Upload/Menu/1600_1637_Code-of-Coduct--Safety-of-Students-Adobe-Scan_Code%20of%20Coduct%20-%20Safety%20of%20Students%20Adobe%20Scan%2004%20Oct%202022%20(4).pdf" target="viewer">Code of Conduct - Safety Student</a>
+                <a href="http://www.bubhopal.ac.in/Site/Upload/Menu/1600_1637_Institutional-Values-and-Best-Practices-_Two%20Best%20Practices.pdf" target="viewer">Institutional Value and Best Practice</a>
+                <a href="http://www.bubhopal.ac.in/Site/Upload/Menu/1600_1637_Annual-gender-sensitization-action-plan_B%20%20%20%20A%20g%20s%20a%20p%20c.pdf" target="viewer">Annual Gender Sensitization Activity Plan</a>
+                <a href="http://www.bubhopal.ac.in/Site/Upload/Menu/1600_1637_Institutional-Distinctiveness_Institutional%20Distinctiveness%20(To%20upload%20with%20Photos)%20(1).pdf" target="viewer">Institutional Distinctiveness</a>
+                <a href="http://www.bubhopal.ac.in/Site/Upload/Menu/1600_1637_IQAC-committee-members-list_Scan%2023%20Mar%202023%20(2).pdf" target="viewer">IQAC Committee Member List</a>
+                <a href="http://www.bubhopal.ac.in/Site/Upload/Menu/1600_1637_CO-POS_PO-PSO-CO%20on%20BU%20Website.pdf" target="viewer">COPOS</a>
+                <a href="http://www.bubhopal.ac.in/Site/Upload/Menu/1600_1637_Specific-facilities-provided-for-women-_C%20%20S%20f%20%20p%20%20w.pdf" target="viewer">Specific Facility Provided for Women</a>
+                <a href="http://www.bubhopal.ac.in/Site/Upload/Menu/1600_1637_REVISED-PROGRAM-CODES--07072022_REVISED%20PROGRAM%20CODES%2007072022.pdf" target="viewer">Revised Programme Code 07072022</a>
+                <a href="https://drive.google.com/file/d/1qc7mguYj757YiwpRYa31SRJBt-AK-Jqy/view" target="_blank">PhD Awarded</a>
+                <a href="https://drive.google.com/file/d/1y2cSXBnLWXsGpQDd38PXt2UjoVt71MR6/view" target="_blank">NSS UTD BU Report 2015-20</a>
+                <a href="http://www.bubhopal.ac.in/Site/Upload/Menu/1600_1637_BU-Program-Details_BU%20Program%20Details.pdf" target="viewer">BU Programme Detail</a>
+                <a href="https://drive.google.com/file/d/1oUQMWtQibyYMprur2M04Wsw6yodZE5t5/view" target="_blank">Final Research Papers</a>
+                <a href="https://drive.google.com/file/d/1kJTG4OJl7QUk63kBic1xeZoHb5O9u5RF/view" target="_blank">Conference, Seminar and Expert Lecture</a>
+            </div>
+            <div class="document-viewer">
+                <iframe name="viewer" src=""></iframe>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2025 IQAC Portal. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+

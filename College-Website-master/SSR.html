@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barkatullah Vishwavidyalaya - SSR Page</title>
+    <link rel="shortcut icon" href="image/Barkatullah_University_logo.png" type="image/svg+xml">
+<style>
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color:#E29850;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+nav ul li:hover {
+    background-color: #555;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    min-width: 180px;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    width: 100%;
+}
+
+.content {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+button {
+    padding: 10px;
+    background-color: #E29850;;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005c9c;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+</style></head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Barkatullah Vishwavidyalaya, Bhopal</h1>
+            <p>Self Study Report (SSR) for Accreditation</p>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Academics</a></li>
+            <li><a href="#">IQAC</a>
+                <ul>
+                    <li><a href="#">IQAC Notification</a></li>
+                    <li><a href="#">IIQA</a></li>
+                    <li><a href="#">SSR</a>
+                        <ul>
+                            <li><a href="#">SSR Final</a></li>
+                            <li><a href="#">Executive Summary</a></li>
+                            <li><a href="#">Evaluative Reports of the Dept</a></li>
+                            <li><a href="#">Quantitative Metric (QnM)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="content">
+        <section class="intro">
+            <h2>Welcome to the Self Study Report (SSR)</h2>
+            <p>Barkatullah Vishwavidyalaya has completed its Self Study Report (SSR) for accreditation purposes. This report provides a detailed account of the university’s activities, institutional preparedness, and achievements in various areas such as academic excellence, infrastructure, research, and student welfare.</p>
+        </section>
+
+        <!-- SSR Sections -->
+        <section class="ssr-sections">
+            <div class="section">
+                <h3>SSR Final</h3>
+                <p>The final SSR document contains detailed information for the NAAC accreditation process. It includes qualitative and quantitative metrics, along with a self-assessment report of the university's performance over the years.</p>
+                <button onclick="openFile('SSR_Final')">Download SSR Final</button>
+            </div>
+
+            <div class="section">
+                <h3>Executive Summary</h3>
+                <p>This section summarizes the highlights of the SSR, providing an overview of the university’s academic achievements, infrastructure, and social contributions.</p>
+                <button onclick="openFile('Executive_Summary')">Download Executive Summary</button>
+            </div>
+
+            <div class="section">
+                <h3>Evaluative Reports of the Department</h3>
+                <p>The department-wise evaluative reports assess the quality of education, research output, faculty performance, and student satisfaction in each department.</p>
+                <button onclick="openFile('Evaluative_Reports')">Download Evaluative Reports</button>
+            </div>
+
+            <div class="section">
+                <h3>Data Templates Document</h3>
+                <p>This document contains the various data templates for reporting quantitative metrics that are essential for accreditation purposes.</p>
+                <button onclick="openFile('Data_Templates')">Download Data Templates</button>
+            </div>
+
+            <div class="section">
+                <h3>Quantitative Metric (QnM)</h3>
+                <p>The Quantitative Metric (QnM) focuses on numerical data, performance indicators, and key metrics for evaluating the university's growth and achievements in academic, research, and infrastructure sectors.</p>
+                <button onclick="openFile('QnM')">Download Quantitative Metric</button>
+            </div>
+
+            <div class="section">
+                <h3>IQAC Minutes of the Meeting</h3>
+                <p>Minutes of the IQAC meetings, which detail the discussions, decisions, and action plans made for enhancing the quality of education and research.</p>
+                <button onclick="openFile('IQAC_Minutes')">Download IQAC Minutes</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Barkatullah Vishwavidyalaya, Bhopal. All Rights Reserved.</p>
+        <p>For inquiries, please contact <a href="mailto:info@bubhopal.ac.in">info@bubhopal.ac.in</a></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // JavaScript function to handle file download or redirection
+        function openFile(fileType) {
+            alert("Downloading " + fileType + " document.");
+            // Here, you can set the link to the actual document URL for download.
+            // For example:
+            // window.location.href = '/files/' + fileType + '.pdf';
+        }
+    </script>
+</body>
+
+</html>
