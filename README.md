@@ -93,5 +93,5 @@ Contributions are welcome! If you find any bugs or have suggestions for improvem
 This project is licensed under the **MIT License**.
 
 ## 👨‍💻 Author
-Developed by **[Your Name]** 🚀 *(Replace with your name and GitHub profile link)*
+Developed by **[JITENDRA GUPTA https://github.com/jpb2022]** 🚀 *(Replace with your name and GitHub profile link)*
 
